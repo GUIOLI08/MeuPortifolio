@@ -5,7 +5,7 @@
     --primary-color: #9370DB;
     --seconday-color: #6A0DAD;
     --tertiary-color: #4B0082;
-    --text-color: #E0E0E0;
+    --text-color: #e0e0e0;
 }
 *{
     margin: 0;
@@ -20,20 +20,24 @@ body{
     height: auto;
     background-color: var(--backgroud-color);
     color: var(--text-color);
+    overflow-x: hidden
 }
 
 header{
     position: fixed;
     display: flex;
     width: 100%;
+    height: auto;
     justify-content: space-between;
     align-items: center;
     padding: 1.98vw 7.29vw;
+    z-index: 10000;
 }
 
 header div h1{
     cursor: default;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 
@@ -112,7 +116,7 @@ header div h1{
 .contactButton:hover {
     transform: translateY(-0.35rem);
     animation: BtnColorChange 0.5s ease;
-    background: linear-gradient(322deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    background: linear-gradient(322deg, var(--primary-color) 20%, var(--seconday-color) 100%);
 }
 
 main{
@@ -153,38 +157,148 @@ main{
     background-color: var(--seconday-color);
 }
 
+.inicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+
+.euSou{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2.313rem;
+}
+
+.euSou h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.BtnPurple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8.28vw;
+    height: 2.92vw;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    color: var(--text-color);
+    background: linear-gradient(162deg, var(--primary-color) 20%, var(--seconday-color) 100%);
+    transition: all 0.3s ease;
+    border-radius: 0.7rem;
+    gap: 1rem;
+}
+
+#linkedin{
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: var(--text-color);
+}
+
+.BtnPurple:hover{
+    transform: translateY(-0.35rem);
+    animation: BtnColorChange 0.5s ease;
+    background: linear-gradient(322deg, var(--primary-color) 20%, var(--seconday-color) 100%);
+}
+
+.BtnWhite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8.28vw;
+    height: 2.92vw;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: transparent;
+    border: 2.5px solid var(--text-color);
+    transition: all 0.3s ease;
+    border-radius: 0.7rem;
+    gap: 1rem;
+}
+
+#github{
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: var(--text-color);
+}
+
+.BtnWhite:hover{
+    transform: translateY(-0.35rem);
+    background-color: var(--text-color);
+    color: var(--backgroud-color);
+}
+
+.BtnWhite:hover #github{
+    fill: var(--backgroud-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 23.54vw;
+    background-color: rgba(26, 26, 26, 0.5);
+    border: 2px solid rgb(224, 224, 224, 0.5);
+    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
+    border-radius: 0.99vw;
+    color: var(--text-color);
+    padding: 1.5rem 1.313rem;
+}
+
+#red, #yellow, #green{
+    width: 32px;
+    height: 32px;
+}
+
+#red{ fill: red;
+}
+
+#yellow{ fill: yellow; }
+
+#green{ fill: rgb(2, 255, 2); }
+
+
 @keyframes BtnColorChange {
     0% {
-        background: linear-gradient(162deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(162deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     10% {
-        background: linear-gradient(170deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(170deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     20% {
-        background: linear-gradient(185deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(185deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     30% {
-        background: linear-gradient(210deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(210deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
-    40% {
-        background: linear-gradient(235deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    20% {
+        background: linear-gradient(235deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     50% {
-        background: linear-gradient(255deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(255deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     60% {
-        background: linear-gradient(275deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(275deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     70% {
-        background: linear-gradient(295deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(295deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     80% {
-        background: linear-gradient(310deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(310deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     90% {
-        background: linear-gradient(318deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(318deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
     100% {
-        background: linear-gradient(322deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+        background: linear-gradient(322deg, var(--primary-color) 20%, var(--seconday-color) 100%);
     }
 }
