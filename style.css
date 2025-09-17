@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root{
+    --backgroud-color: #0A0A0A;
+    --primary-color: #9370DB;
+    --seconday-color: #6A0DAD;
+    --tertiary-color: #4B0082;
+    --text-color: #E0E0E0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.98vw 7.29vw;
+}
+
+header div h1{
+    cursor: default;
+    font-size: 1.5rem;
+}
+
+
+.textPurple{
+    background: linear-gradient(162deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-list{
+    position: relative;
+    display: flex;
+    right: 43px;
+    list-style: none;
+    gap: 3.5vw;
+}
+
+.nav-item{
+    position: relative;
+    padding-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3.5px;
+    background: linear-gradient(162deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-item a{
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-item:hover{
+    transform: translateY(-0.35rem);
+}
+
+.nav-item:hover::after{
+    transform: scaleX(1);
+}
+
+.contactButton {
+    display: flex;
+    padding: 0.6vw 1.5vw;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(162deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    font-size: 1rem;
+    color: var(--text-color);
+    gap: 0.1vw;
+    font-weight: 600;
+    border: none;
+    border-radius: 1.438rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#arrow{
+    position: relative;
+    left: 0.313rem;
+    fill: var(--text-color);
+    width: 1.5rem;
+}
+
+.contactButton:hover {
+    transform: translateY(-0.35rem);
+    animation: BtnColorChange 0.5s ease;
+    background: linear-gradient(322deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 7.29vw;
+}
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(4rem);
+    z-index: 0;
+}
+
+#circle1{
+    top: 8rem;
+    right: 9.5rem;
+    width: 33.688rem;
+    height: 34.813rem;
+    background-color: #8A2BE2;
+}
+
+#circle2{
+    top: 29.5rem;
+    right: 20.688rem;
+    width: 20.438rem;
+    height: 21.688rem;
+    background-color: var(--primary-color);
+}
+
+#circle3{
+    top: 20.188rem;
+    right: 2.688rem;
+    width: 20.438rem;
+    height: 21.688rem;
+    background-color: var(--seconday-color);
+}
+
+@keyframes BtnColorChange {
+    0% {
+        background: linear-gradient(162deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    10% {
+        background: linear-gradient(170deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    20% {
+        background: linear-gradient(185deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    30% {
+        background: linear-gradient(210deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    40% {
+        background: linear-gradient(235deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    50% {
+        background: linear-gradient(255deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    60% {
+        background: linear-gradient(275deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    70% {
+        background: linear-gradient(295deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    80% {
+        background: linear-gradient(310deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    90% {
+        background: linear-gradient(318deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+    100% {
+        background: linear-gradient(322deg, var(--primary-color) 40%, var(--seconday-color) 100%);
+    }
+}
