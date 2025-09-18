@@ -30,7 +30,7 @@ header{
     height: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 1.98vw 7.29vw;
+    padding: 2.376rem 8.748rem; /* Convertido de 1.98vw 7.29vw */
     z-index: 10000;
 }
 
@@ -53,7 +53,7 @@ header div h1{
     display: flex;
     right: 43px;
     list-style: none;
-    gap: 3.5vw;
+    gap: 4.2rem; /* Convertido de 3.5vw */
 }
 
 .nav-item{
@@ -92,13 +92,13 @@ header div h1{
 
 .contactButton {
     display: flex;
-    padding: 0.6vw 1.5vw;
+    padding: 0.72rem 1.8rem; /* Convertido de 0.6vw 1.5vw */
     justify-content: center;
     align-items: center;
     background: linear-gradient(162deg, var(--primary-color) 40%, var(--seconday-color) 100%);
     font-size: 1rem;
     color: var(--text-color);
-    gap: 0.1vw;
+    gap: 0.12rem; /* Convertido de 0.1vw */
     font-weight: 600;
     border: none;
     border-radius: 1.438rem;
@@ -123,7 +123,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 7.29vw;
+    padding: 0 8.748rem; /* Convertido de 0 7.29vw */
 }
 
 .circle{
@@ -171,6 +171,21 @@ main{
     background-color: #9370DB;
 }
 
+#circle6{
+    top: 87rem;
+    right: 9rem;
+    width: 17.804rem;
+    height: 18.399rem;
+    background-color: #8A2BE2;
+}
+#circle7{
+    top: 99rem;
+    right: 8rem;
+    width: 10.207rem;
+    height: 9.711rem;
+    background-color: #9370DB;
+}
+
 .inicio{
     display: flex;
     justify-content: space-between;
@@ -198,8 +213,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 8.28vw;
-    height: 2.92vw;
+    width: 9.936rem; /* Convertido de 8.28vw */
+    height: 3.504rem; /* Convertido de 2.92vw */
     font-size: 1rem;
     cursor: pointer;
     font-weight: 600;
@@ -227,8 +242,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 8.28vw;
-    height: 2.92vw;
+    width: 9.936rem; /* Convertido de 8.28vw */
+    height: 3.504rem; /* Convertido de 2.92vw */
     font-size: 1rem;
     cursor: pointer;
     font-weight: 600;
@@ -240,7 +255,7 @@ main{
     gap: 1rem;
 }
 
-#github{
+#github, #curriculo{
     width: 2.2rem;
     height: 2.2rem;
     fill: var(--text-color);
@@ -252,7 +267,7 @@ main{
     color: var(--backgroud-color);
 }
 
-.BtnWhite:hover #github{
+.BtnWhite:hover #github, .BtnWhite:hover #curriculo{
     fill: var(--backgroud-color);
 }
 
@@ -260,12 +275,12 @@ main{
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 23.54vw;
+    height: 28.248rem; /* Convertido de 23.54vw */
     background-color: rgba(26, 26, 26, 0.5);
     border: 2px solid rgb(224, 224, 224, 0.5);
     -webkit-backdrop-filter: blur(80px);
     backdrop-filter: blur(80px);
-    border-radius: 0.99vw;
+    border-radius: 1.188rem; /* Convertido de 0.99vw */
     color: var(--text-color);
     padding: 1.5rem 1.313rem;
     animation: floatLoop 4s ease-in-out infinite;
@@ -284,7 +299,7 @@ main{
 #green{ fill: rgb(2, 255, 2); }
 
 span{
-    user-select: none;              
+    user-select: none;                
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -314,6 +329,57 @@ span b{
 .indent-2{
     margin-left: 40px;
 }
+
+.sobremim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 8.4rem; /* Convertido de 7vw */
+    z-index: 999;
+}
+
+.sobremim h1{
+    font-size: 3rem;
+}
+
+.sobremim-div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.foto-div{
+    position: relative;
+    display: flex;
+    left: 5.28rem; /* Convertido de 4.4vw */
+    bottom: 1.2rem; /* Convertido de 1vw */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 2.4rem; /* Convertido de 2vw */
+}
+
+.foto-circle{
+    width: 25rem;
+    height: 25rem;
+    border: 15px solid var(--seconday-color);
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 50% ;
+}
+
+.foto-circle img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 @keyframes BtnColorChange {
     0% {
         background: linear-gradient(162deg, var(--primary-color) 20%, var(--seconday-color) 100%);
@@ -352,12 +418,12 @@ span b{
 
 @keyframes floatLoop {
     0% {
-    transform: translateY(-15px); /* Começa um pouco acima */
+    transform: translateY(-15px);
     }
     50% {
-        transform: translateY(15px);  /* Vai um pouco para baixo */
+        transform: translateY(15px);
     }
     100% {
-        transform: translateY(-15px); /* Volta para o ponto inicial, fechando o ciclo perfeitamente */
+        transform: translateY(-15px);
     }
 }
