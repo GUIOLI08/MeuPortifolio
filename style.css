@@ -157,6 +157,20 @@ main{
     background-color: var(--seconday-color);
 }
 
+#circle4{
+    top: 48rem;
+    width: 17.804rem;
+    height: 18.399rem;
+    background-color: #8A2BE2;
+}
+#circle5{
+    top: 57.75rem;
+    left: 19.625rem;
+    width: 10.188rem;
+    height: 9.711rem;
+    background-color: #9370DB;
+}
+
 .inicio{
     display: flex;
     justify-content: space-between;
@@ -167,10 +181,12 @@ main{
 }
 
 .euSou{
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 50%;
     gap: 2.313rem;
+    bottom: 1.6rem;
 }
 
 .euSou h1{
@@ -252,6 +268,7 @@ main{
     border-radius: 0.99vw;
     color: var(--text-color);
     padding: 1.5rem 1.313rem;
+    animation: floatLoop 4s ease-in-out infinite;
 }
 
 #red, #yellow, #green{
@@ -266,7 +283,37 @@ main{
 
 #green{ fill: rgb(2, 255, 2); }
 
+span{
+    user-select: none;              
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+span b{
+    font-weight: 600;
+}
 
+.pinkText{
+    color: #F279AA;
+}
+
+.greenText{
+    color: #50ED5A;
+}
+
+.yellowText{
+    color: #F1DA5A;
+}
+
+.indent-1{
+    margin-left: 20px;
+}
+
+.indent-2{
+    margin-left: 40px;
+}
 @keyframes BtnColorChange {
     0% {
         background: linear-gradient(162deg, var(--primary-color) 20%, var(--seconday-color) 100%);
@@ -300,5 +347,17 @@ main{
     }
     100% {
         background: linear-gradient(322deg, var(--primary-color) 20%, var(--seconday-color) 100%);
+    }
+}
+
+@keyframes floatLoop {
+    0% {
+    transform: translateY(-15px); /* Começa um pouco acima */
+    }
+    50% {
+        transform: translateY(15px);  /* Vai um pouco para baixo */
+    }
+    100% {
+        transform: translateY(-15px); /* Volta para o ponto inicial, fechando o ciclo perfeitamente */
     }
 }
