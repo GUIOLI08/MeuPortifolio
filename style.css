@@ -263,7 +263,7 @@ main{
     gap: 1rem;
 }
 
-#linkedin{
+#linkedin, #github, #curriculo{
     width: 2.2rem;
     height: 2.2rem;
     fill: var(--text-color);
@@ -290,12 +290,6 @@ main{
     transition: all 0.3s ease;
     border-radius: 0.7rem;
     gap: 1rem;
-}
-
-#github, #curriculo{
-    width: 2.2rem;
-    height: 2.2rem;
-    fill: var(--text-color);
 }
 
 .BtnWhite:hover{
@@ -570,6 +564,151 @@ span b{
 
 .arrow1{
     fill: var(--primary-color);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #0A0A0A;
+    background-image: url('images/footer.png');
+    padding: 0 8.748rem; /* Convertido de 0 7.29vw */
+    gap: 4.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-top, .footer-bottom{
+    display: flex;
+    width: 100%;
+}
+
+.footer-bottom{
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--text-color);
+    padding: 2rem 0;
+    gap: 5rem;
+}
+
+.footer-left, .footer-right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.footer-left{
+    align-items: flex-start;
+    gap: 3.875rem;
+}
+
+.footer-left h1{
+    width: 37rem;
+    text-align: center;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    gap: 3.875rem;
+}
+
+.input{
+    display: flex;
+    position: relative;
+}
+
+.input input, .input textarea{
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: 1.031rem;
+    background-color: transparent;
+    border: 3px solid rgb(224, 224, 224, 0.25);
+    outline: none;
+}
+
+.input input{
+    width: 37rem;
+    height: 4.375rem;
+    padding: 0 2rem;
+}
+
+.input textarea{
+    padding: 2rem 2rem;
+    width: 37rem;
+    height: 12.625rem;
+    resize: none;
+}
+
+.input label{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 700;
+    left: 2.5rem;
+    top: -0.5rem;
+}
+
+.input-form button{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.875rem;
+    border: none;
+    gap: 1rem;
+    border-radius: 1.031rem;
+    background: linear-gradient(162deg, var(--primary-color) 20%, var(--seconday-color) 100%);
+    color: var(--text-color);
+    font-weight: 700;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.input-form button:hover {
+    transform: translateY(-0.35rem);
+    animation: BtnColorChange 0.5s ease;
+    background: linear-gradient(322deg, var(--primary-color) 20%, var(--seconday-color) 100%);
+}
+
+.footer-right{
+    padding: 6.3rem 0 0 0;
+    gap: 4rem;
+}
+
+.footer-right div a{
+    text-decoration: none;
+}
+
+#description-footer{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#linkedin2, #github2{
+    width: 2.7rem;
+    height: 2.7rem;
+    fill: var(--text-color);
+}
+
+.github-linkedin-footer{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contact-div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-icon{
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: var(--text-color);
 }
 
 @keyframes BtnColorChange {
