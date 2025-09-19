@@ -123,7 +123,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 7.691rem 8.748rem 0 8.748rem; /* Convertido de 0 7.29vw */
+    padding: 0 8.748rem; /* Convertido de 0 7.29vw */
 }
 
 .circle{
@@ -178,12 +178,37 @@ main{
     height: 18.399rem;
     background-color: #8A2BE2;
 }
+
 #circle7{
     top: 99rem;
     right: 8rem;
     width: 10.207rem;
     height: 9.711rem;
     background-color: #9370DB;
+}
+
+#circle8{
+    top: 90rem;
+    left: 20rem;
+    width: 33.688rem;
+    height: 34.813rem;
+    background-color: #8A2BE2;
+}
+
+#circle9{
+    top: 110rem;
+    left: 17rem;
+    width: 19.313rem;
+    height: 18.375rem;
+    background-color: #9370DB;
+}
+
+#circle10{
+    top: 110rem;
+    left: 37rem;
+    width: 19.313rem;
+    height: 18.375rem;
+    background-color: #6A0DAD;
 }
 
 .inicio{
@@ -320,6 +345,10 @@ span b{
 
 .yellowText{
     color: #F1DA5A;
+}
+
+.purpleText{
+    color: #9C93EC;
 }
 
 .indent-1{
