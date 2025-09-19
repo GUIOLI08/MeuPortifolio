@@ -17,7 +17,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: auto;
+    min-height: 100vh;
     background-color: var(--backgroud-color);
     color: var(--text-color);
     overflow-x: hidden
@@ -106,11 +106,14 @@ header div h1{
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-#arrow{
+#arrow, .arrow1{
     position: relative;
+    width: 1.5rem;
+}
+
+#arrow{
     left: 0.313rem;
     fill: var(--text-color);
-    width: 1.5rem;
 }
 
 .contactButton:hover {
@@ -188,15 +191,15 @@ main{
 }
 
 #circle8{
-    top: 90rem;
-    left: 20rem;
+    top: 89rem;
+    left: 19rem;
     width: 33.688rem;
     height: 34.813rem;
     background-color: #8A2BE2;
 }
 
 #circle9{
-    top: 110rem;
+    top: 106rem;
     left: 17rem;
     width: 19.313rem;
     height: 18.375rem;
@@ -204,11 +207,20 @@ main{
 }
 
 #circle10{
-    top: 110rem;
-    left: 37rem;
+    top: 109rem;
+    left: 36rem;
     width: 19.313rem;
     height: 18.375rem;
     background-color: #6A0DAD;
+}
+
+#circle11{
+    top: 149rem;
+    right: -5rem;
+    width: 19.313rem;
+    height: 19.313rem;
+    filter: blur(7rem);
+    background-color: #8435D5;
 }
 
 .inicio{
@@ -407,6 +419,157 @@ span b{
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.skillsProjetos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 8.4rem 0; /* Convertido de 7vw */
+    z-index: 999;
+    gap: 11.125rem;
+}
+
+.skills, .projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 4.25rem;
+}
+
+.skills h1, .projetos h1{
+    font-size: 3rem;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 4.375rem;
+}
+
+.skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 0.625rem;
+    background: #9370DB;
+    background: linear-gradient(135deg,rgba(147, 112, 219, 1) 15%, rgba(106, 13, 173, 1) 100%);
+    transition: all 0.2s ease;
+}
+
+.skill:hover{
+    scale: 1.1;
+    transform: translateY(-10px);
+    box-shadow: 0px 9px 30px 9px rgba(106,13,173,0.25);
+    -webkit-box-shadow: 0px 9px 30px 9px rgba(106,13,173,0.25);
+    -moz-box-shadow: 0px 9px 30px 9px rgba(106,13,173,0.25);
+}
+
+.icon{
+    fill: var(--text-color);
+}
+
+#html5{
+    width: 5rem;
+}
+
+#css3{
+    width: 4rem;
+}
+
+#js{
+    width: 5rem;
+}
+
+#node{
+    width: 5rem;
+}
+
+#mysql{
+    width: 4rem;
+}
+
+#postgres{
+    width: 5rem;
+}
+
+.projetos-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 4.688rem;
+}
+
+.projeto{
+    display: flex;
+    flex-direction: column;
+    width: 22.125rem;
+    min-height: 25.938rem;
+    background-color: #2C2C2C;
+    border-radius: 30px;
+}
+
+.projeto-image, .projeto-description{
+    width: 100%;
+    height: 50%;
+}
+
+.projeto-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 1.5rem 1.375rem;
+}
+
+.projeto-link{
+    display: flex;
+    gap: 0.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: 1.5px underline;
+    text-underline-offset: 4px;
+    text-decoration: none;
+}
+
+.projeto-name{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+#projeto1{
+    background: url('./images/projetoEnchant.png');
+}
+
+#projeto2{
+    background: url('./images/projetoCadastroProduto.png');
+}
+
+#projeto3{
+    background: url('./images/projetoPortalSucelso.png');
+}
+
+#projeto4{
+    background: url('./images/projetoChatBot.webp');
+    background-position: bottom;
+}
+
+#projeto1, #projeto2, #projeto3, #projeto4{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+.arrow1{
+    fill: var(--primary-color);
 }
 
 @keyframes BtnColorChange {
