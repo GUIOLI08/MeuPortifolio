@@ -12,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     display: flex;
@@ -23,7 +24,7 @@ body{
     overflow-x: hidden
 }
 
-header{
+.header{
     position: fixed;
     display: flex;
     width: 100%;
@@ -34,7 +35,11 @@ header{
     z-index: 10000;
 }
 
-header div h1{
+.header.scrolled {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0) 100%);
+}
+
+.header div h1{
     cursor: default;
     font-size: 1.5rem;
     font-weight: 600;
