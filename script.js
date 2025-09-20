@@ -49,7 +49,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const contactMeBtn = document.getElementById('contactMeBtn');
     const header = document.querySelector('.header');
     const form = document.querySelector('.input-form');
-    var status = document.getElementById("form-status");
+    let status = document.getElementById("form-status");
+    const container = document.querySelector('.sobremim .container');
+    const tooltip = document.getElementById('mouseTooltip');
 
     const scrollTrigger = 10;
 
@@ -82,8 +84,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
     contactMeBtn.addEventListener('click', () => {
         window.location.href = '#footer'
     });
+    
+    let mouseX = 0;
+    let mouseY = 0;
+    let tooltipX = 0;
+    let tooltipY = 0;
+    
+    function lerp(start, end, factor) {
+        return start + (end - start) * factor;
+    }
+    
+    container.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX + 5;
+        mouseY = e.clientY + 25;
+    });
+    
+    function animateTooltip() {
+
+        const speed = 0.15;
+        
+        tooltipX = lerp(tooltipX, mouseX, speed);
+        tooltipY = lerp(tooltipY, mouseY, speed);
+        
+        tooltip.style.left = tooltipX + 'px';
+        tooltip.style.top = tooltipY + 'px';
+        
+        if (tooltip.classList.contains('show')) {
+            requestAnimationFrame(animateTooltip);
+        }
+    }
+    
+    container.addEventListener('mouseenter', function(e) {
+
+        tooltipX = e.clientX;
+        tooltipY = e.clientY;
+        tooltip.style.left = tooltipX + 'px';
+        tooltip.style.top = tooltipY + 'px';
+        
+        tooltip.classList.add('show');
+        animateTooltip();
+    });
+    
+    container.addEventListener('mouseleave', function() {
+        tooltip.classList.remove('show');
+    });
 
     async function handleSubmit(event) {
+        
         // 1. Impede o comportamento padrão de recarregar a página
         event.preventDefault();
         
