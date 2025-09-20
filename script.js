@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let status = document.getElementById("form-status");
     const container = document.querySelector('.sobremim .container');
     const tooltip = document.getElementById('mouseTooltip');
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-item a');
 
     const scrollTrigger = 10;
 
@@ -127,6 +130,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     container.addEventListener('mouseleave', function() {
         tooltip.classList.remove('show');
+    });
+
+    mobileMenuToggle.addEventListener('click', () => {
+        // Alterna a classe 'active' no botão (para o ícone X)
+        mobileMenuToggle.classList.toggle('active');
+        // Alterna a classe 'active' no menu de navegação (para exibi-lo/escondê-lo)
+        nav.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Remove a classe 'active' para fechar o menu ao clicar em um link
+            mobileMenuToggle.classList.remove('active');
+            nav.classList.remove('active');
+        });
     });
 
     async function handleSubmit(event) {
