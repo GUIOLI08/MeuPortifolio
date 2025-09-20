@@ -516,6 +516,7 @@ span b {
 .mouse-tooltip.show {
     opacity: 1;
     visibility: visible;
+    z-index: 9999;
 }
 
 .tooltip-header {
@@ -1214,7 +1215,7 @@ footer {
         gap: 4rem;
     }
     #typing-effect {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     
@@ -1534,7 +1535,7 @@ footer {
     }
     
     .projeto {
-        max-width: 14rem;
+        width: 22rem;
         min-height: 20rem;
     }
     

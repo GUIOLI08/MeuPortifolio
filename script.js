@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    
     function startTypingEffect() {
         // Textos que serão exibidos, com a formatação HTML
         const lines = [
@@ -98,20 +99,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
     
     container.addEventListener('mousemove', function(e) {
-        mouseX = e.clientX + 5;
-        mouseY = e.clientY + 25;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
     });
     
     function animateTooltip() {
-
         const speed = 0.15;
-        
-        tooltipX = lerp(tooltipX, mouseX, speed);
-        tooltipY = lerp(tooltipY, mouseY, speed);
-        
+        const offset = 20; // Uma margem para o tooltip não colar no cursor
+
+        // Pega as dimensões do tooltip e da janela
+        const tooltipWidth = tooltip.offsetWidth;
+        const tooltipHeight = tooltip.offsetHeight;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        // --- Lógica de Posição Inteligente ---
+
+        // 1. Define a posição alvo padrão (à direita e abaixo do mouse)
+        let targetX = mouseX + offset;
+        let targetY = mouseY + offset;
+
+        // 2. Verifica e corrige a posição Horizontal (X)
+        // Se o tooltip for passar da borda direita...
+        if (mouseX + tooltipWidth + offset > viewportWidth) {
+            // ...muda o alvo para a esquerda do mouse.
+            targetX = mouseX - tooltipWidth - offset;
+        }
+
+        // 3. Verifica e corrige a posição Vertical (Y)
+        // Se o tooltip for passar da borda inferior...
+        if (mouseY + tooltipHeight + offset > viewportHeight) {
+            // ...muda o alvo para cima do mouse.
+            targetY = mouseY - tooltipHeight - offset;
+        }
+
+        // Suaviza o movimento do tooltip em direção à posição alvo
+        tooltipX = lerp(tooltipX, targetX, speed);
+        tooltipY = lerp(tooltipY, targetY, speed);
+
+        // Aplica a posição final
         tooltip.style.left = tooltipX + 'px';
         tooltip.style.top = tooltipY + 'px';
-        
+
+        // Continua a animação enquanto o tooltip estiver visível
         if (tooltip.classList.contains('show')) {
             requestAnimationFrame(animateTooltip);
         }
