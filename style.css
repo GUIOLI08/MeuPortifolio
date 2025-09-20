@@ -1207,9 +1207,10 @@ footer {
     .euSou{
         gap: 4rem;
     }
-    .euSou div span {
+    #typing-effect {
         font-size: 1.8rem;
     }
+    
     
     .buttons-container {
         flex-direction: column;
@@ -1300,6 +1301,10 @@ footer {
         align-items: center;
         text-align: center;
         gap: 4rem;
+    }
+
+    .footer-right h1{
+        font-size: 1.8rem;
     }
 }
 
