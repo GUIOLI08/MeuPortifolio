@@ -1212,7 +1212,8 @@ footer {
     }
     
     .buttons-container {
-        gap: 4rem;
+        flex-direction: column;
+        gap: 2rem;
     }
     
     .BtnPurple, .BtnWhite {
@@ -1231,6 +1232,10 @@ footer {
         gap: 6px;
     }
 
+    .sobremim{
+        padding-top: 4.5rem;
+    }
+
     .foto-div{
         gap: 5rem;
     }
@@ -1242,9 +1247,14 @@ footer {
     }
     
     .foto-buttons {
-        gap: 4rem;
+        flex-direction: column;
+        gap: 2rem;
     }
     
+    .skillsProjetos{
+        padding: 4rem 0 4rem 0;
+    }
+
     .skills h1, .projetos h1, .sobremim h1 {
         font-size: 2.5rem;
     }
@@ -1283,6 +1293,13 @@ footer {
     .mouse-tooltip {
         width: 20rem;
         font-size: 0.8rem;
+    }
+
+    .footer-right{
+        padding: 0 3rem;
+        align-items: center;
+        text-align: center;
+        gap: 4rem;
     }
 }
 
