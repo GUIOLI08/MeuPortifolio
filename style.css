@@ -232,6 +232,15 @@ main{
     background-color: #8435D5;
 }
 
+#circle12{
+    top: 172rem;
+    left: -8rem;
+    width: 19.313rem;
+    height: 19.313rem;
+    filter: blur(7rem);
+    background-color: var(--primary-color);
+}
+
 .inicio{
     display: flex;
     justify-content: space-between;
@@ -585,6 +594,15 @@ span b{
     min-height: 25.938rem;
     background-color: #2C2C2C;
     border-radius: 30px;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.projeto:hover{
+    transform: translateY(-20px);
+    box-shadow: 0px 9px 30px 9px rgba(106,13,173,0.25);
+    -webkit-box-shadow: 0px 9px 30px 9px rgba(106,13,173,0.25);
+    -moz-box-shadow: 0px 9px 30px 9px rgba(106,13,173,0.25);
 }
 
 .projeto-image, .projeto-description{
