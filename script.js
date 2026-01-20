@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     
     function startTypingEffect() {
-        // Textos que serão exibidos, com a formatação HTML
+
         const lines = [
             "Olá, eu sou <b class='textPurple' id='gui'>{ Guilherme }</b>.",
             "Um desenvolvedor",
@@ -18,27 +18,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             if (lineIndex < lines.length) {
                 const currentLine = lines[lineIndex];
                 
-                // Se ainda há caracteres para digitar na linha atual
                 if (charIndex < currentLine.length) {
-                    // Adiciona o próximo caractere
+
                     currentHtml += currentLine.charAt(charIndex);
                     typingElement.innerHTML = currentHtml;
                     charIndex++;
-                    setTimeout(type, 50); // Velocidade da digitação (em ms)
+                    setTimeout(type, 50);
                 } else {
-                    // Passa para a próxima linha
+                    
                     lineIndex++;
                     charIndex = 0;
-                    // Adiciona a quebra de linha, exceto para a última linha
+                    
                     if (lineIndex < lines.length) {
                         currentHtml += '<br>';
                     }
-                    setTimeout(type, 250); // Pausa antes de começar a próxima linha
+                    setTimeout(type, 250);
                 }
             }
         }
 
-        // Inicia o efeito
         type();
     }
 
@@ -59,14 +57,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const scrollTrigger = 10;
 
-    // Criamos uma função para adicionar/remover a classe
     function handleScroll() {
-        // window.scrollY nos dá a posição vertical atual da barra de rolagem
         if (window.scrollY > scrollTrigger) {
-            // Se a rolagem for maior que o nosso gatilho (10px)
             header.classList.add('scrolled');
         } else {
-            // Se for menor, removemos a classe
             header.classList.remove('scrolled');
         }
     }
@@ -87,6 +81,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     contactMeBtn.addEventListener('click', () => {
         window.location.href = '#footer'
+    });
+
+    CurriculoBtn.addEventListener('click', () => {
+        let link = document.createElement('a');
+        link.href = 'archives/curriculo.pdf';
+        link.download = 'curriculo.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     });
     
     let mouseX = 0;
