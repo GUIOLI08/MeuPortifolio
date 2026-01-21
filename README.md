@@ -39,6 +39,6 @@ Este projeto foi construído utilizando as seguintes ferramentas:
 
 Fique à vontade para entrar em contato comigo para parcerias, dúvidas ou apenas para trocar uma ideia sobre tecnologia!
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/guilherme-oliver-75620536a)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:guilherme.oliver@msn.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/guilherme-oliver-75620536a)
    
