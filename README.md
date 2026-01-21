@@ -1,4 +1,4 @@
-# 💻 Guilherme Oliver| Developer Portfolio
+# 💻 Guilherme Oliver | Developer Portfolio
 
 <p align="center">
   <img src="https://img.shields.io/github/languages/top/GUIOLI08/guilhermeoliver-dev-portfolio?style=for-the-badge" alt="Linguagem mais usada">
