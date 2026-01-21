@@ -13,7 +13,7 @@ Este é o repositório do meu site de portfólio pessoal. Aqui apresento quem so
 ## 🌐 Demonstração
 
 Você pode visualizar o projeto online aqui: 
-👉 **[https://guioli08.github.io/guilhermeoliver-dev-portfolio/]**
+👉 **https://guioli08.github.io/guilhermeoliver-dev-portfolio/**
 
 ---
 
